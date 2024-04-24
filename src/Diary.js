@@ -5,7 +5,12 @@ export default class Diary {
 
   //Behaviours
 
-  addEntry = (entry) => this.#entries.push(entry);
+  addEntry = (entry) => {
+    if (entry === null) {
+      return;
+    };
+    this.#entries.push(entry);
+  }
 
     getEntry = () => this.#entries;
     
